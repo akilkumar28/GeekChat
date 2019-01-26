@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GroupVC.swift
 //  GeekChat
 //
 //  Created by Akil Kumar Thota on 1/26/19.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GroupVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
 }
-

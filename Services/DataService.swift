@@ -39,4 +39,11 @@ class DataService {
     }
     
     
+    func createDBUser(uid:String,userData:[String:Any]) {
+        
+        REF_USERS.child(uid).setValue(userData  )
+        
+    }
+    
+    
 }
