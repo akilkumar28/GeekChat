@@ -354,6 +354,9 @@
                                             <constraint firstAttribute="width" constant="25" id="k7i-wy-Uq8"/>
                                         </constraints>
                                         <state key="normal" image="compose"/>
+                                        <connections>
+                                            <segue destination="lRg-ZH-lLZ" kind="show" id="QBP-Js-K7h"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.16862745098039217" green="0.16470588235294117" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -398,6 +401,120 @@
             </objects>
             <point key="canvasLocation" x="2388" y="-494"/>
         </scene>
+        <!--Create PostVC-->
+        <scene sceneID="Ax1-mf-GH4">
+            <objects>
+                <viewController id="lRg-ZH-lLZ" customClass="CreatePostVC" customModule="GeekChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cXT-ss-4th">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oGX-14-dof">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_post_something" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7E-fB-WdC">
+                                        <rect key="frame" x="94" y="74" width="226" height="30"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="25"/>
+                                        <color key="textColor" red="0.5450980392" green="0.71764705880000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9o-Xr-rlM">
+                                        <rect key="frame" x="16" y="76.5" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="6IG-S8-CJm"/>
+                                            <constraint firstAttribute="width" constant="25" id="CJE-Fz-qjk"/>
+                                        </constraints>
+                                        <state key="normal" image="close"/>
+                                        <connections>
+                                            <action selector="dismissButtonTapped:" destination="lRg-ZH-lLZ" eventType="touchUpInside" id="HNR-sC-NKT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16862745100000001" green="0.1647058824" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="y9o-Xr-rlM" firstAttribute="centerY" secondItem="O7E-fB-WdC" secondAttribute="centerY" id="4Sg-oz-3CE"/>
+                                    <constraint firstAttribute="bottom" secondItem="O7E-fB-WdC" secondAttribute="bottom" constant="16" id="Cvb-WL-bvD"/>
+                                    <constraint firstItem="O7E-fB-WdC" firstAttribute="centerX" secondItem="oGX-14-dof" secondAttribute="centerX" id="UpS-Yn-qEW"/>
+                                    <constraint firstAttribute="height" constant="120" id="ngQ-Xe-hXI"/>
+                                    <constraint firstItem="y9o-Xr-rlM" firstAttribute="leading" secondItem="oGX-14-dof" secondAttribute="leading" constant="16" id="vPO-cf-fgD"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VoT-W7-GAw">
+                                <rect key="frame" x="0.0" y="796" width="414" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QY2-Mp-9xP">
+                                        <rect key="frame" x="167" y="10" width="80" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="1fW-ca-QnS"/>
+                                            <constraint firstAttribute="width" constant="80" id="CKe-ZG-sAq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
+                                        <state key="normal" title="SEND" image="send">
+                                            <color key="titleColor" red="0.5450980392" green="0.71764705880000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendButtonTapped:" destination="lRg-ZH-lLZ" eventType="touchUpInside" id="EKD-hJ-Un1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16862745100000001" green="0.1647058824" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="6za-9U-zAV"/>
+                                    <constraint firstItem="QY2-Mp-9xP" firstAttribute="centerX" secondItem="VoT-W7-GAw" secondAttribute="centerX" id="btz-Ad-UDp"/>
+                                    <constraint firstItem="QY2-Mp-9xP" firstAttribute="top" secondItem="VoT-W7-GAw" secondAttribute="top" constant="10" id="hBI-n4-9GD"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PiE-6f-Ceb">
+                                <rect key="frame" x="20" y="150" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="M4O-Nr-iiq"/>
+                                    <constraint firstAttribute="width" constant="100" id="UF4-ct-sXi"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello@apple.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTi-0h-EHD">
+                                <rect key="frame" x="140" y="190" width="154" height="20"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="0.015686274509803921" green="0.6705882352941176" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ENP-5s-lYC">
+                                <rect key="frame" x="20" y="270" width="374" height="506"/>
+                                <color key="backgroundColor" red="0.1647058824" green="0.16862745100000001" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25490196078431371" green="0.27058823529411763" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VoT-W7-GAw" firstAttribute="top" secondItem="ENP-5s-lYC" secondAttribute="bottom" constant="20" id="0YQ-gA-kO7"/>
+                            <constraint firstItem="ENP-5s-lYC" firstAttribute="top" secondItem="PiE-6f-Ceb" secondAttribute="bottom" constant="20" id="3qr-Rl-cET"/>
+                            <constraint firstItem="HTi-0h-EHD" firstAttribute="leading" secondItem="PiE-6f-Ceb" secondAttribute="trailing" constant="20" id="H4P-N1-CT1"/>
+                            <constraint firstItem="VoT-W7-GAw" firstAttribute="trailing" secondItem="wFy-JV-BH7" secondAttribute="trailing" id="OM1-r3-Dzx"/>
+                            <constraint firstItem="wFy-JV-BH7" firstAttribute="trailing" secondItem="ENP-5s-lYC" secondAttribute="trailing" constant="20" id="Wia-Be-Tr7"/>
+                            <constraint firstItem="oGX-14-dof" firstAttribute="leading" secondItem="wFy-JV-BH7" secondAttribute="leading" id="ZFg-gB-Q7p"/>
+                            <constraint firstItem="PiE-6f-Ceb" firstAttribute="top" secondItem="oGX-14-dof" secondAttribute="bottom" constant="30" id="b9k-BG-LhV"/>
+                            <constraint firstItem="PiE-6f-Ceb" firstAttribute="leading" secondItem="wFy-JV-BH7" secondAttribute="leading" constant="20" id="c0L-CX-IkJ"/>
+                            <constraint firstItem="HTi-0h-EHD" firstAttribute="centerY" secondItem="PiE-6f-Ceb" secondAttribute="centerY" id="dy3-52-mtD"/>
+                            <constraint firstItem="oGX-14-dof" firstAttribute="top" secondItem="cXT-ss-4th" secondAttribute="top" id="m36-rb-Qs2"/>
+                            <constraint firstAttribute="bottom" secondItem="VoT-W7-GAw" secondAttribute="bottom" id="nPV-t6-6V9"/>
+                            <constraint firstItem="ENP-5s-lYC" firstAttribute="leading" secondItem="wFy-JV-BH7" secondAttribute="leading" constant="20" id="ohf-ak-GUQ"/>
+                            <constraint firstItem="VoT-W7-GAw" firstAttribute="leading" secondItem="wFy-JV-BH7" secondAttribute="leading" id="pf6-cT-bBO"/>
+                            <constraint firstItem="oGX-14-dof" firstAttribute="trailing" secondItem="wFy-JV-BH7" secondAttribute="trailing" id="smF-Vr-fZj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wFy-JV-BH7"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageTextView" destination="ENP-5s-lYC" id="1PS-zD-6Ms"/>
+                        <outlet property="profilePicImageView" destination="PiE-6f-Ceb" id="JkP-Ev-MM7"/>
+                        <outlet property="userEmailLabel" destination="HTi-0h-EHD" id="ek3-2J-UwU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qLL-45-AVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3100.0000000000005" y="-494.19642857142856"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fBe-EH-3pE">
             <objects>
@@ -432,6 +549,7 @@
         <image name="loginBGImage" width="375" height="284"/>
         <image name="logoutIcon" width="19" height="21"/>
         <image name="me-tabIcon" width="25" height="25"/>
+        <image name="send" width="29" height="29"/>
     </resources>
     <color key="tintColor" red="0.094117647058823528" green="0.50980392156862742" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

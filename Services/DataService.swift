@@ -46,4 +46,17 @@ class DataService {
     }
     
     
+    
+    func postMessage(withMessage message:String, withuid uid:String,withGroupKey key:String?, completion: @escaping (_ success:Bool) -> () ) {
+        
+        if key != nil  {
+            // this is for group
+        } else {
+            REF_FEED.childByAutoId().updateChildValues(["content" : message,
+                                                        "senderId": uid])
+            completion(true)
+        }
+    }
+    
+    
 }
